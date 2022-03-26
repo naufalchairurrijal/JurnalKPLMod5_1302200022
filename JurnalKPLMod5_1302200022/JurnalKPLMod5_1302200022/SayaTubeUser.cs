@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace JurnalKPLMod5_1302200022
 
         public SayaTubeUser(string a)
         {
+            Debug.Assert(a.Length <= 100); //panjang maksimal username adalah 100
+            Debug.Assert(!string.IsNullOrEmpty(a)); //username tidak boleh null
             username = a;
             id = rnd.Next(10000, 99999);
             uploadedVideo = new List<SayaTubeVideo>();

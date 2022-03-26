@@ -32,7 +32,7 @@ Console.WriteLine(" ");
 
 
 Console.WriteLine("Review Film " + video1.title + " oleh " + user1.username);
-video1.IncreasePlayCount(2);
+video1.IncreasePlayCount(1000000000);
 video1.PrintVideoDetail();
 
 
